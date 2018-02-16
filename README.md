@@ -11,11 +11,11 @@ Usage:
     ./fetch_a_ABCD test sub1 anat T1w s3://NDAR_Central_1/submission_12844/fast-track/mssm/NDARINV007W6H7B_baselineYear1Arm1_ABCD-T1_20170224175304.tgz
     
 This command will:
-    * Create, if needed, a 'Study_Directory' in the local directory from where the command is run [Note: This should be updated to requiring a full path...]
-    * Create, if needed, a 'Subject_ID' subdirectory in the Study_Directory
-    * Create, if needed, a directory called 'type' ('anat' in this example). [Note, it is currently up to the user to name this in BIDS compliant fashion]
-    * Temporarily creates a 'tmp' directory within this 'type' subdirectory
-    * Copies the named S3 file into this temporary directory
-    * unzip's, and dcm2nii's the downloaded S3 file
-    * Stores the nii.gz version in the 'type' directory, named 'Subject_ID'_'image_suffix'.nii.gz. In this example case, in the 'anat' directory, we have a file called sub1_T1w.nii.gz. [Note, it is currently up to the user to name this in BIDS compliant fashion]
-    * The dicom's are stored in the 'type' directory in a subdirectory called 'Subject_ID'_'image_suffix_dicom, and the json file is paired with the image file in the 'type' directory
+* Create, if needed, a 'Study_Directory' in the local directory from where the command is run [Note: This should be updated to requiring a full path...]
+* Create, if needed, a 'Subject_ID' subdirectory in the Study_Directory
+* Create, if needed, a directory called 'type' ('anat' in this example). [Note, it is currently up to the user to name this in BIDS compliant fashion]
+* Temporarily creates a 'tmp' directory within this 'type' subdirectory
+* Copies the named S3 file into this temporary directory
+* unzip's, and dcm2nii's the downloaded S3 file
+* Stores the nii.gz version in the 'type' directory, named 'Subject_ID'_'image_suffix'.nii.gz. In this example case, in the 'anat' directory, we have a file called sub1_T1w.nii.gz. [Note, it is currently up to the user to name this in BIDS compliant fashion]
+* The dicom's are stored in the 'type' directory in a subdirectory called 'Subject_ID'_'image_suffix_dicom, and the json file is paired with the image file in the 'type' directory
