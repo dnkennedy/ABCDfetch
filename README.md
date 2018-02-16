@@ -19,3 +19,13 @@ This command will:
 * unzip's, and dcm2nii's the downloaded S3 file
 * Stores the nii.gz version in the 'type' directory, named 'Subject_ID'_'image_suffix'.nii.gz. In this example case, in the 'anat' directory, we have a file called sub1_T1w.nii.gz. [Note, it is currently up to the user to name this in BIDS compliant fashion]
 * The dicom's are stored in the 'type' directory in a subdirectory called 'Subject_ID'_'image_suffix_dicom, and the json file is paired with the image file in the 'type' directory
+* Finally, the 'tmp' directory is cleaned out
+
+## Prerequsites
+
+This is a bash script. The following are assumes to be present:
+* AWS CLI (Amazon webservices command line interface)
+* Chris Rorden's dcm2nii (currently hard coded to /Applications/MRIcron/dcm2nii, would be nice to generalize!)
+* NDA Access permission to ABCD, and an 'NDA' profile in your AWS configuration (more about this elsewhere)
+
+## Warning: I'm not really a programmer, and this is a virtually complete hack; would welcome any cleaning and improvements...
