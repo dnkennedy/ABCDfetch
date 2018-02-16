@@ -23,7 +23,7 @@ This command will:
 
 ## Prerequsites
 
-This is a bash script. The following are assumes to be present:
+This is a bash script. The following are assumed to be present:
 * AWS CLI (Amazon webservices command line interface)
 * Chris Rorden's dcm2nii (currently hard coded to /Applications/MRIcron/dcm2nii, would be nice to generalize!)
 * NDA Access permission to ABCD, and an 'NDA' profile in your AWS configuration (more about this elsewhere)
