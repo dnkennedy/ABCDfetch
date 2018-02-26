@@ -21,7 +21,7 @@ This command will:
 * The dicom's are stored in the 'type' directory in a subdirectory called 'Subject_ID'_'image_suffix_dicom, and the json file is paired with the image file in the 'type' directory
 * Finally, the 'tmp' directory is cleaned out
 
-## Prerequsites
+### Prerequsites
 
 This is a bash script. The following are assumed to be present:
 * AWS CLI (Amazon webservices command line interface)
@@ -29,6 +29,19 @@ This is a bash script. The following are assumed to be present:
 * NDA Access permission to ABCD, and an 'NDA' profile in your AWS configuration (more about this elsewhere)
 * My workflow for NDA access includes use of the NDA downloadmanager commandline tool
 
-## Warning: 
+### Warning: 
+I'm not really a programmer, and this is a virtually complete hack; would welcome any cleaning and improvements...
+There may be various MAC OS-specific things going on here that I've not generalized...
+
+## PrepCreds
+The helper-script 'prep_creds.sh' looks at your AWS credentials, sees if you have an NDA 'personna', creates one for you if you don't, checks if you current one is active, and re-activates it if it isn't. This script should streamline the management of making sure your AWS credentials are in order for the above fetch_a_ABCD.sh script
+
+ Expected usage: prep_creds NDA_UserName
+
+### Prerequsites
+This is a bash script. The following are assumed to be present:
+[TODO]
+
+### Warning: 
 I'm not really a programmer, and this is a virtually complete hack; would welcome any cleaning and improvements...
 There may be various MAC OS-specific things going on here that I've not generalized...
