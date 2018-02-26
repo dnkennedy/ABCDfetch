@@ -2,13 +2,13 @@
 Some tools for local fetching ABCD data for local processing
 
 ## fetch_a_ABCD
-This shell script takes a S3 path, fetches from S3, and prepared the data for local use in a BIDS-like representation
+This shell script takes a S3 path, fetches from S3, and prepares the data for local use in a BIDS-like representation
 
 Usage: 
   fetch_a_ABCD.sh Study_Directory Subject_ID image_suffix type S3_path
   
   For example:
-    ./fetch_a_ABCD test sub1 anat T1w s3://NDAR_Central_1/submission_12844/fast-track/mssm/NDARINV007W6H7B_baselineYear1Arm1_ABCD-T1_20170224175304.tgz
+    ./fetch_a_ABCD.sh test sub1 anat T1w s3://NDAR_Central_1/submission_12844/fast-track/mssm/NDARINV007W6H7B_baselineYear1Arm1_ABCD-T1_20170224175304.tgz
     
 This command will:
 * Create, if needed, a 'Study_Directory' in the local directory from where the command is run [Note: This should be updated to requiring a full path...]
