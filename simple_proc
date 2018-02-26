@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "Running simple_proc"
+echo "Expected usage: simple_proc Study_Directory Subject_ID type image_suffix"
+if [ "$#" -ne 4 ]; then
+  echo "Illegal number of parameters provided"
+  exit 10
+fi
+initdir=$PWD
+dir=$1
+sub=$2
+type=$3
+suff=$4
+
+if [ ! -d $dir ] ; then
+  echo "Subject directory $dir does not exist, sorry..."
+  exit 1
+fi
