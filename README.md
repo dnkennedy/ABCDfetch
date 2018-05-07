@@ -1,5 +1,5 @@
 # ABCDfetch
-Some tools for local fetching ABCD data for local processing
+Some tools for local fetching ABCD raw (not preprocedded, yet...) data for local processing
 
 ## fetch_a_ABCD
 This shell script takes a S3 path, fetches from S3, and prepares the data for local use in a BIDS-like representation
